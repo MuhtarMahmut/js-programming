@@ -10,4 +10,18 @@ Week01 Review:
 			Perplexity
 			Tabnine
 
-Class starts at 10:05 AM EST
+
+Dynamicly Typed Programming Language: JavaScript, Python 
+
+    interpreter ==> during the run time
+
+    let variableName;
+
+
+Static Typed Programming Language: Java, C, C#, C++, TypeScript
+
+    Compiler ==> during the compile time
+
+    int variableName;
+
+
