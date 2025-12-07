@@ -134,4 +134,88 @@ function reverseArray(arr){
 
 console.log("---------------------------------");
 
-// come back 11:55 AM EST
+// Word Break Problem Solution
+// Determines if a string can be segmented into dictionary words
+
+function wordBreak(s, wordDict) {
+    // Convert dictionary array to Set for O(1) lookup
+    const wordSet = new Set(wordDict);
+    const n = s.length;
+    
+    // dp[i] represents whether substring s[0...i-1] can be segmented
+    const dp = new Array(n + 1).fill(false);
+    dp[0] = true; // Empty string is always segmentable
+    
+    // Check each substring ending at position i
+    for (let i = 1; i <= n; i++) {
+      // Try all possible starting positions j
+      for (let j = 0; j < i; j++) {
+        // If substring up to j is segmentable and remaining part is in dictionary
+        if (dp[j] && wordSet.has(s.substring(j, i))) {
+          dp[i] = true;
+          break; // No need to check other j positions for this i
+        }
+      }
+    }
+    
+    return dp[n];
+  }
+  
+  // Test cases with the provided dictionary
+  const dictionary = ["i", "like", "sam", "sung", "samsung", "mobile", "ice", "cream", "icecream", "man", "go", "mango"];
+  
+  // Test 1: "ilike" -> should return true ("i like")
+  console.log("Input: ilike");
+  console.log("Output:", wordBreak("ilike", dictionary) ? "Yes" : "No");
+  console.log("");
+  
+  // Test 2: "ilikesamsung" -> should return true ("i like samsung" or "i like sam sung")
+  console.log("Input: ilikesamsung");
+  console.log("Output:", wordBreak("ilikesamsung", dictionary) ? "Yes" : "No");
+  console.log("");
+  
+  // Additional test cases
+  console.log("Input: sammobile");
+  console.log("Output:", wordBreak("sammobile", dictionary) ? "Yes" : "No"); // true: "sam mobile"
+  console.log("Input: mangoicecream");
+  console.log("Output:", wordBreak("mangoicecream", dictionary) ? "Yes" : "No"); // true: "mango icecream"
+  console.log("Input: ilikeicecream");
+  console.log("Output:", wordBreak("ilikeicecream", dictionary) ? "Yes" : "No"); // true: "i like ice cream"
+  console.log("Input: impossible");
+  console.log("Output:", wordBreak("impossible", dictionary) ? "Yes" : "No"); // false
+  
+
+  console.log("----------------------------------");
+
+  function countDistinctSubstrings(str) {
+    const n = str.length;
+    let count = 0;
+  
+    // Sliding window with two pointers
+    let left = 0;
+    const lastIndex = new Map(); // stores last index of each character
+  
+    for (let right = 0; right < n; right++) {
+      const ch = str[right];
+  
+      // If character already present in current window,
+      // move left just after its last occurrence
+      if (lastIndex.has(ch) && lastIndex.get(ch) >= left) {
+        left = lastIndex.get(ch) + 1;
+      }
+  
+      // Update last seen index of current character
+      lastIndex.set(ch, right);
+  
+      // All substrings ending at 'right' and starting from any index in [left, right]
+      // have all distinct characters. Their count is (right - left + 1).
+      count += right - left + 1;
+    }
+  
+    return count;
+  }
+  
+  // Example usage:
+  console.log(countDistinctSubstrings("gffg")); // 6
+  console.log(countDistinctSubstrings("gfg"));  // 5
+  

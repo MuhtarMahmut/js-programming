@@ -1,15 +1,14 @@
 Week01 Review:
 	Topics:
 		Core javaScript
-		
-		Asynchronious Programming:
-				Promises
-				Async & Await
 
 		AI Tools:
 			Perplexity
 			Tabnine
 
+        Asynchronious Programming:
+				Promises
+				Async & Await
 
 Dynamicly Typed Programming Language: JavaScript, Python 
 
@@ -23,5 +22,115 @@ Static Typed Programming Language: Java, C, C#, C++, TypeScript
     Compiler ==> during the compile time
 
     int variableName;
+
+
+Promises: future value/error (50/50)
+    represnets the value that will ve availabe either now, or in future, or never
+
+
+Task01:
+    Make promise  (pending state)
+    step1
+    step2
+    step3
+    step4
+    step5
+    step6
+    return value;
+
+
+Task02:
+    step1
+    step2
+    step3 (needs the value of task01 returning) ===> Await for the promised value
+    step4
+    step5
+
+Task03:
+    step1
+    step2
+    step3 (needs the value of task01 returning) ===> Await for the promised value
+
+Task04:
+    step1
+    step2
+    step3 (needs the value of task01 returning) ===> Await for the promised value
+    step4
+
+
+
+
+
+===============================================
+
+class BasePage{
+    common web page locators
+    common web page actions
+}
+
+class LogInPage extend BasePage{
+    usernameInputBox
+    passWordInputBox
+    loginButton
+    ...
+    unique locators and actions
+}
+
+class HomePage extend BasePag{
+    unique locators and actions
+}
+
+class CheckOutPage extend BasePag{
+    unique locators and actions
+}
+
+=====================================================
+
+Word Break Problem
+Given an input string and a dictionary of words, find out if the input string can be segmented
+into a space-separated sequence of dictionary words. See following examples for more details.
+This is a famous Google interview question, also being asked by many other companies now a days.
+Consider the following dictionary
+    { i, like, sam, sung, samsung, mobile, ice, cream, icecream, man, go, mango}
+    Input:  ilike
+    Output: Yes
+    The string can be segmented as "i like".
+
+    Input:  ilikesamsung
+    Output: Yes
+    The string can be segmented as "i like samsung" or "i like sam sung".
+
+
+
+Create a function that can Count of substrings having all distinct characters
+        Given a string str consisting of lowercase alphabets, the task is to find the number of possible substrings (not necessarily distinct) that consists of distinct characters only.
+            Examples:
+                Input: Str = “gffg”
+                Output: 6
+        Explanation:
+            All possible substrings from the given string are,
+            ( “g“, “gf“, “gff”, “gffg”, “f“, “ff”, “ffg”, “f“, “fg“, “g” )
+            Among them, the highlighted ones ( “g“, “gf“, “f“, “f“, “fg“, “g” ) consists of distinct characters only.
+
+                Input: str = “gfg”
+                Output: 5
+        Explanation:
+            All possible substrings from the given string are,
+            ( “g“, “gf“, “gfg”, “f“, “fg“, “g” )
+            Among them, the highlighted ( “g“, “gf“, “f“, “fg“, “g” ) consists of distinct characters only.
+
+
+
+
+Given a square matrix, calculate the absolute difference between the sums of its diagonals.
+
+For example, the square matrix  is shown below:
+        1 2 3
+        4 5 6
+        9 8 9
+
+    Output:
+        The absolute difference is: 2
+
 
 
