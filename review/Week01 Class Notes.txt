@@ -1,0 +1,13 @@
+Week01 Review:
+	Topics:
+		Core javaScript
+		
+		Asynchronious Programming:
+				Promises
+				Async & Await
+
+		AI Tools:
+			Perplexity
+			Tabnine
+
+Class starts at 10:05 AM EST
