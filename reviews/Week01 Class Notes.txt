@@ -7,7 +7,10 @@ Week01 Review:
         SKILL
         MCP
 
-        Asynchronious Operations
+        Asynchronious Operations:
+            promises
+            async
+            await
 
 
 Compiler vs interpreter: both can translate source code to binary
@@ -85,3 +88,28 @@ class HomePage extends BasePage{
 MCP: Model Context Protocol
 
     GITHUB MCP: Allows the AI to access and manage the github 
+
+
+=====================================
+
+Promise: future value (or event that can happen or can not happen.)
+
+
+Task01
+    step1  makes a promise to give the value
+    step2
+    step3
+    step4
+    step5 
+
+
+Task02
+    step1
+    step2
+    step3 needs the value of task01 ==> await for the promise to be fullfilled/rejected
+    step4
+
+Task03
+    step1
+    step2
+    step3  needs the value of task01 ==> await for the promise to be fullfilled/rejected
