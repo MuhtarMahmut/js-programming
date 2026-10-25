@@ -1,0 +1,87 @@
+Week01 Review:
+    Topics:
+        Core JavaScript
+
+        GitHub Copilot - Prompt templates
+        Setting up Copilot CLI
+        SKILL
+        MCP
+
+        Asynchronious Operations
+
+
+Compiler vs interpreter: both can translate source code to binary
+
+    compiler: compile time (while writing teh codes)
+
+    interpreter: run time (while running teh code)
+
+
+
+compiled programming languages: Java, C#, C++, Ruby, TypeScript
+
+    static typing ===> Type Safety
+
+    int variable1
+
+    String variable2
+
+
+Interpreted Programming Languages: JavaScript, Python
+
+    dynamic typing
+
+    let variable1
+
+
+
+Next Week: 
+    Introduction to Playwright & Playwright Browsers
+    Page Fixture
+    Global COnfigurations 
+    Test Function & Groups
+    Playwright Locators Part1 (CSS, XPath, Text, ID)
+    Hooks Functions
+
+    During live class:
+        Playwright Locators Part2 (getBy methods)
+        Local Edge & Google Chromes
+        Screenshot, Video recording, and Trace
+        More of GitHub Copilot & Copilot CLI
+
+
+
+POM (Page Object Model):
+    We create seperate classes for each web page of the application.
+    We store the web page' locators, and actions into those page calsses.
+
+
+class BasePage{
+    common properties of all page classes
+}
+
+
+class LoginPage extends BasePage{
+
+    usernameField;
+    passwordField;
+    loginButton;
+
+    enterUsername(username){}
+
+    enterPassword(password){}
+
+    clickLoginButton(){}
+
+}
+
+
+class HomePage extends BasePage{
+
+}
+
+=====================================
+
+MCP: Model Context Protocol
+
+    GITHUB MCP: Allows the AI to access and manage the github 
